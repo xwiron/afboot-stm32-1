@@ -6,13 +6,13 @@
 #include "gpio.h"
 #include "start_kernel.h"
 
-#define CONFIG_HSE_HZ	8000000
-#define CONFIG_PLL_M	8
-#define CONFIG_PLL_N	336
+#define CONFIG_HSE_HZ	25000000
+#define CONFIG_PLL_M	15
+#define CONFIG_PLL_N	216
 #define CONFIG_PLL_P	2
-#define CONFIG_PLL_Q	7
+#define CONFIG_PLL_Q	4
 #define PLLCLK_HZ (((CONFIG_HSE_HZ / CONFIG_PLL_M) * CONFIG_PLL_N) / CONFIG_PLL_P)
-#if PLLCLK_HZ == 168000000
+#if PLLCLK_HZ == 180000000
 #define FLASH_LATENCY	5
 #else
 #error PLL clock does not match 168 MHz
