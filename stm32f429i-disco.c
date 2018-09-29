@@ -15,7 +15,7 @@
 #if PLLCLK_HZ == 180000000
 #define FLASH_LATENCY	5
 #else
-#error PLL clock does not match 168 MHz
+#error PLL clock does not match 180 MHz
 #endif
 
 static void *usart_base = (void *)USART1_BASE;
