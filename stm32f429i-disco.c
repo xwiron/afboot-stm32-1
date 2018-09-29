@@ -7,20 +7,17 @@
 #include "start_kernel.h"
 
 #define CONFIG_HSE_HZ	25000000
-#define CONFIG_PLL_M	15
-#define CONFIG_PLL_N	216
+#define CONFIG_PLL_M	25
+#define CONFIG_PLL_N	360
 #define CONFIG_PLL_P	2
 #define CONFIG_PLL_Q	4
-#define PLLCLK_HZ (((CONFIG_HSE_HZ / CONFIG_PLL_M) * CONFIG_PLL_N) / CONFIG_PLL_P)
+#define PLLCLK_HZ       ((( CONFIG_HSE_HZ / CONFIG_PLL_M) * CONFIG_PLL_N ) / CONFIG_PLL_P)
 
-#define FLASH_LATENCY	5
-/*
-#if PLLCLK_HZ == 180000000
+#if PLLCLK_HZ == 168000000
 #define FLASH_LATENCY	5
 #else
 #error PLL clock does not match 180 MHz
 #endif
-*/
 
 static void *usart_base = (void *)USART1_BASE;
 static void *gpio_base = (void *)GPIOA_BASE;
