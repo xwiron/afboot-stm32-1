@@ -13,7 +13,7 @@
 #define CONFIG_PLL_Q	4
 #define PLLCLK_HZ       ((( CONFIG_HSE_HZ / CONFIG_PLL_M) * CONFIG_PLL_N ) / CONFIG_PLL_P)
 
-#if PLLCLK_HZ == 168000000
+#if PLLCLK_HZ == 180000000
 #define FLASH_LATENCY	5
 #else
 #error PLL clock does not match 180 MHz
